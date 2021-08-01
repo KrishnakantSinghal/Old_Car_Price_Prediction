@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Car Price Prediction</title>    
+    <link rel="stylesheet" href="static\css\style.css">
+</head>
+
+<body bgcolor="green">
+
+<p align="center" class="heading"><b>Old Car Price Prediction- Enter the required Details</b></p>
+<div align="center">
+    <form action="/predict" method="POST">
+
+        <div class="b"><b>Name</b><br>
+            <input class="a" type="text" name ="name" required="required"></div>
+
+            <div class="b"><b>Location</b><br>
+                <input class="a" type="text" name ="location" required="required"></div>
+        
+        <div class="b"><b>Year</b><br>
+            <input class="a" type="number" name ="year" required="required"></div>
+
+        <div class="b"><b>Kilmeters Driven</b><br>
+            <input type="Number" name="Kms_Driven" required="required" class="a"></div>
+        
+        <div class="b"><b>Fuel Type</b><br>
+            <select name="fuel_type" class="a">
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Diesel</option>
+            <option value="CNG">CNG</option></select></div>
+                
+        <div class="b"><b>Transmission Type</b><br>
+            <select name="Transmission_Manual" class="a">
+            <option value="Manual">Manual</option>
+            <option value="Automatic">Automatic</option>
+        </select></div>
+
+        <div class="b"><b>Number of previous Owners</b><br>
+            <select name="Owner" class="a">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="3">4</option>
+        </select>
+        </div>
+
+        <div class="b"><b>Mileage (in kmpl)</b><br>
+            <input type="number" name="mileage" required="required" class="a"></div>
+
+        <div class="b"><b>Engine Capacity (in CC)</b><br>
+            <input type="number" name="engine" required="required" class="a"></div>
+
+        <div class="b"><b>Power (in bhp)</b><br>
+            <input type="number" name="power" required="required" class="a"></div>
+
+        <div class="b"><b>Number of Seats</b><br>
+            <input type="number" name="seats" required="required" class="a"></div>
+        
+        
+
+        <div class="c" align="center"><button type="submit" onclick = "predict();" class="d">Calculate selling price</button></div>
+    </div>
+</form>
+
+<h1 align="center" class="heading">{{pred}}</h1>
+
+<p>@KrishnakantSinghal</p>
+</body>
+</html>
